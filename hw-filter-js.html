@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array-filtering</title>
+</head>
+
+<body>
+    <script>
+        //targil 1
+        let arr1 = [100, 23, 450, 98, 980]
+
+        let bigger_than_100 = arr1.filter(num => num >= 100)
+        console.log(bigger_than_100)
+
+        //targil 2
+        let arr2 = [7, 300, 200, 800, 1, 99]
+
+        let equal_numbers = arr2.filter(num => num % 2 == 0)
+        console.log(equal_numbers)
+
+        //targil 3
+        let arr3 = [7, 300, 200, 800, 1, 99]
+
+        let odd_numbers = arr2.filter(num => num % 2 == 1)
+        console.log(odd_numbers)
+
+        //targil 4
+        let arr4 = ["avigdor", "ben", "js", "mi"]
+
+        let more_than_3_letters = arr4.filter(num => num.length >= 3)
+        console.log(more_than_3_letters)
+
+        //targil 5
+        let arr5 = [7, 30, 20, 800, 1, 9, 1000]
+
+        let numbers_smaller_than_10 = arr5.filter(num => num < 10)
+        console.log(numbers_smaller_than_10)
+
+        //targil 6
+
+        function filterArr(arr) {
+            let length = parseInt(prompt("enter the number of ints you want the array to be fill with"))
+            let tempArr = []
+            for (const int of arr) {
+                if (int.length == length) {
+                    tempArr.push(int)
+                }
+                return tempArr
+            }
+        }
+        let customArr = filterArr(arr4)
+        console.log(customArr)
+
+        //targil 7
+        let arr6 = [11, 9, 7, 6, 5, 3]
+
+        let numbers_that_not_devide_to_three = arr6.filter(num => num % 3 !== 0)
+        console.log(numbers_that_not_devide_to_three)
+
+        //targil 9
+
+        let arr7 = []
+
+        do {
+            let x = parseInt(prompt("enter a number"))
+            if (x == -1010) {
+                break
+            }
+            if (x > 0 && x !== 999 && x !== 555) {
+                arr7.push(x)
+            }
+            else if (x == 555) {
+                arr7.shift()
+            }
+            else if (x === 999) {
+                arr7.pop()
+            }
+            else if (x < 0) {
+                arr7.unshift(x)
+            }
+            else if (x === 0) {
+                continue
+            }
+            console.log(arr7)
+
+        } while (true)
+
+        console.log(arr7)
+    </script>
+</body>
+
+</html>
